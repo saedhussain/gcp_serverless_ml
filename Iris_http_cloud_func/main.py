@@ -50,7 +50,7 @@ def iris_predict(request):
     # Get the features sent for prediction
     params = request.get_json()
 
-    if (params is not None) and ('features' in params)::
+    if (params is not None) and ('features' in params):
         # Run a test prediction
         pred_species  = model.predict(np.array([params['features']]))
         return pred_species[0]
